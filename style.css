@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+:root {
+  --contrast: 100%;
+  --brightness: 100%;
+  --hue-rotate: 0deg;
+  --sepia: 0%;
+  --accent: #4A90E2;
+  --dark-accent: #3F7AC0;
+  --gray: #E6E7F0;
+  --dark-gray: #4E5056;
+}
 *{
     font-family: 'Poppins', sans-serif;
+    
 }
 .navbar-brand{
    font-weight: 600;
@@ -20,25 +31,38 @@
 /* grid main */
 
 .main-cards{
-    
+
     display: grid;
     grid-gap: 20px;
-    border: 2px solid red;
+    grid-template-columns: 1fr 1fr 1fr;
+
 }
 .all-in{
     margin: 20px;
     border: 2px solid red;
     padding: 5vh;
+    justify-content: center;
+    align-items: center;
 }
 .one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-row: 1;
     grid-column: 1 / span 1;
 }
 .two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-row: 1;
     grid-column: 2 / span 1;
 }
 .three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     grid-row: 1;
     grid-column: 3 / span 1;
 }
@@ -48,76 +72,7 @@
 }
 
 /* upload file button */
-#butt {
-    border-radius: 10px;
-    
-    padding: 12%;
-
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: 15vw;
-    margin: 0 auto;
-    text-align:center;
-}
-.input-file-container {
-    display: flex;
-    position: relative;
-    width: auto;
-    border-radius: 20px;
-
-  } 
-  .js .input-file-trigger {
-    display: block;
-    padding: 13px 36px;
-    background: rgb(59 130 246 / 0.5);
-    color: #fff;
-    font-size: 1em;
-    transition: all .4s;
-    cursor: pointer;
-    border-radius: 10px;
-    
-  }
-  .js .input-file {
-    position: absolute;
-    top: 0; left: 0;
-    width: 225px;
-    opacity: 0;
-    padding: 14px 0;
-    cursor: pointer;
-  }
-  .js .input-file:hover + .input-file-trigger,
-  .js .input-file:focus + .input-file-trigger,
-  .js .input-file-trigger:hover,
-  .js .input-file-trigger:focus {
-    background: #34495E;
-    color: #39D2B4;
-  }
-  
-  .file-return {
-    margin: 0;
-  }
-  .file-return:not(:empty) {
-    margin: 1em 0;
-  }
-  .js .file-return {
-    font-style: italic;
-    font-size: .9em;
-    font-weight: bold;
-  }
-  .js .file-return:not(:empty):before {
-    content: "Selected file: ";
-    font-style: normal;
-    font-weight: normal;
-  }
- .inputText{
-    font-size: 1.2rem;
-    font-weight: 800;
-    display: flex;
-    margin: 8%;
- } 
-
-@media screen and (max-width: 769px){
+@media screen and (max-width: 1200px){
 .one{
     grid-row: 1;
     grid-column: 1 / span 1;
@@ -130,5 +85,8 @@
     grid-row: 3;
     grid-column: 1 / span 1;
 }
-
+.four{
+    grid-row: 4;
+    grid-column: 1 / span 1;
+}
 }
