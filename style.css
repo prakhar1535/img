@@ -466,7 +466,7 @@ body {
     grid-column: 1 / span 3;
   }
   .three {
-    width: 80vwc;
+    width: 70vw;
     height: 90vw;
     grid-row: 3;
     grid-column: 1 / span 3;
