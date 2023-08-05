@@ -23,14 +23,28 @@ var fileInput = document.getElementById('file_input');
     });
 
     let premium = document.getElementById('premium_holder');
-    document.addEventListener("scroll", function (e) {
-        let top = premium.getBoundingClientRect().top
-        // console.log(top);
-        if (top <= 0) {
-            premium.classList.add("sticky")
-        }
+    let windowsize = window.screen.width
+    console.log(windowsize)
+    if(windowsize >= 768){
+        document.addEventListener("scroll", function (e) {
+            let top = premium.getBoundingClientRect().top
+            // console.log(top);
+            if (top <= 0) {
+                premium.classList.add("sticky")
+            }
+            
+    
+        });
+            }
+    // document.addEventListener("scroll", function (e) {
+    //     let top = premium.getBoundingClientRect().top
+    //     // console.log(top);
+    //     if (top <= 0 && ) {
+    //         premium.classList.add("sticky")
+    //     }
+        
 
-    });
+    // });
 
 $(document).ready(function () {
     $("#monthly").click(function () {
