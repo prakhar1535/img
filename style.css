@@ -466,10 +466,10 @@ body {
     grid-column: 1 / span 3;
   }
   .three {
-    width: 70vw;
+    width: 80vw;
     height: 90vw;
     grid-row: 3;
-    grid-column: 1 / span 3;
+    grid-column: 1/ span 3;
   }
   .four {
     grid-row: 4;
@@ -563,7 +563,7 @@ body {
   content: "";
   font-family: "Boxicons";
   color: #2ecc71;
-  font-size: 7rem;
+  font-size: 4rem;
   position: absolute;
   opacity: 0.2;
   top: 20px;
