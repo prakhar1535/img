@@ -25,17 +25,21 @@ var fileInput = document.getElementById('file_input');
     let premium = document.getElementById('premium_holder');
     let windowsize = window.screen.width
     console.log(windowsize)
-    if(windowsize >= 768){
+
         document.addEventListener("scroll", function (e) {
+                if(windowsize >= 768){
             let top = premium.getBoundingClientRect().top
             // console.log(top);
             if (top <= 0) {
                 premium.classList.add("sticky")
+            }else{
+                console.log('width<768');
             }
-            
+          
+            }
     
         });
-            }
+            
     // document.addEventListener("scroll", function (e) {
     //     let top = premium.getBoundingClientRect().top
     //     // console.log(top);
@@ -46,29 +50,30 @@ var fileInput = document.getElementById('file_input');
 
     // });
 
-$(document).ready(function () {
-    $("#monthly").click(function () {
-        $(this).addClass('active');
-        $("#yearly").removeClass('active')
-
-        $(".monthlyPriceList").removeClass('d-none');
-        $(".monthlyPriceList").addClass('fadeIn');
-        $(".yearlyPriceList").addClass('d-none');
-
-        $(".indicator").css("left", "2px");
-    })
-
-    $("#yearly").click(function () {
-        $(this).addClass('active');
-        $("#monthly").removeClass('active');
-
-        $(".yearlyPriceList").removeClass('d-none');
-        $(".yearlyPriceList").addClass('fadeIn');
-        $(".monthlyPriceList").addClass('d-none');
-
-        $(".indicator").css("left", "163px");
-    })
-})
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("monthly").addEventListener("click", function () {
+          this.classList.add("active");
+          document.getElementById("yearly").classList.remove("active");
+      
+          document.querySelector(".monthlyPriceList").classList.remove("d-none");
+          document.querySelector(".monthlyPriceList").classList.add("fadeIn");
+          document.querySelector(".yearlyPriceList").classList.add("d-none");
+      
+          document.querySelector(".indicator").style.left = "2px";
+        });
+      
+        document.getElementById("yearly").addEventListener("click", function () {
+          this.classList.add("active");
+          document.getElementById("monthly").classList.remove("active");
+      
+          document.querySelector(".yearlyPriceList").classList.remove("d-none");
+          document.querySelector(".yearlyPriceList").classList.add("fadeIn");
+          document.querySelector(".monthlyPriceList").classList.add("d-none");
+      
+          document.querySelector(".indicator").style.left = "163px";
+        });
+      });
+      
 const animateInput = document.getElementById('animate_btn_file_input');
 const selectFileBtn = document.getElementById('animate_btn');
 
@@ -248,3 +253,135 @@ toggles.forEach((toggle) => {
       toggle.parentNode.classList.toggle("active");
     });
   });
+
+//prmiuim on click
+const premium_img=document.getElementById('premium_svg')
+premium.addEventListener("click",()=>{
+    const targetElement= document.getElementById('pricing')
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+})
+//   GSAP---------------------------------
+var tl= gsap.timeline()
+tl.from('.navbar,.navbar li',{
+    opacity:0,
+    delay:1,
+    duration:.4,
+    stagger:.3,
+    y:-20
+})
+
+tl.from('.heading-img',{
+    opacity:0,
+    scale:0,
+    y:30,
+    // delay:.5,
+    duration:.8,
+})
+tl.from('.main-cards,.one,.two,.three',{
+    opacity:0,
+    delay:-1,
+    duration:.4,
+    stagger:.3,
+    y:-20
+})
+gsap.from('#working',{
+    y:-100,
+    duration:1,
+    opacity:0,
+    scrollTrigger:{
+        trigger:"#working",
+        scroller:"body",
+        // markers:true,
+        start:'top 80%',
+        end:'top 40%',
+        scrub:2
+    }
+})
+tl.from('.para1,.para-img1',{
+    opacity:0,
+    delay:1,
+    duration:.4,
+    // stagger:.3,
+    x:-20,
+    scrollTrigger:{
+        trigger:"#working",
+        scroller:"body",
+        // markers:true,
+        start:'top 60%',
+        end:'top ',
+        scrub:2
+    }
+})
+tl.from('.para2,.para-img2',{
+    opacity:0,
+    // delay:1,
+    duration:1,
+    // stagger:.3,
+    x:-20,
+    scrollTrigger:{
+        trigger:"#para_divider",
+        scroller:"body",
+        // markers:true,
+        start:'top 95%',
+        end:'top 60% ',
+        scrub:2
+    }
+})
+tl.from('#features ,.fea-z,.fea-2,.fea-3',{
+    opacity:0,
+    // delay:1,
+    duration:4,
+    stagger:.7,
+    y:-50,
+    scrollTrigger:{
+        trigger:"#features",
+        scroller:"body",
+        // markers:true,
+        start:'top 70%',
+        end:'top 40% ',
+        scrub:2
+    }
+
+})
+gsap.from('#about',{
+    y:100,
+    duration:1,
+    opacity:0,
+    scrollTrigger:{
+        trigger:"#about",
+        scroller:"body",
+        // markers:true,
+        start:'top 80%',
+        end:'top 40%',
+        scrub:2
+    }
+})
+gsap.from('#pricing, .row, inner',{
+    y:100,
+    duration:2,
+    stagger:.5,
+    opacity:0,
+    scrollTrigger:{
+        trigger:"#pricing",
+        scroller:"body",
+        // markers:true,
+        start:'top 80%',
+        end:'top 20%',
+        scrub:4
+    }
+})
+gsap.from('.faq',{
+    y:100,
+    duration:.5,
+    // stagger:.5,
+    opacity:0,
+    scrollTrigger:{
+        trigger:".faq",
+        scroller:"body",
+        // markers:true,
+        start:'top 80%',
+        end:'top 40%',
+        scrub:true
+    }
+})
+

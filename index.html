@@ -36,7 +36,7 @@
     content="Convert images to text easily using our image to text converter. Extract text from images and scanned documents. Try it now for free!">
   <meta name="twitter:image" content="https://www.imagetotextconverter.com/images/twitter-image.jpg">
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+ 
 </head>
 
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
@@ -78,10 +78,7 @@
 
 
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+     
       </div>
     </div>
   </nav>
@@ -99,7 +96,7 @@
             style="display: none;"><box-icon id="upload_icon" name='upload'></box-icon></div>
 
 
-        <p>Drag Image Here or Upload.</p>
+        <p id="one_para">Drag Image Here or Upload.</p>
         <input id="file_input" type="file">
       </div>
     </div>
@@ -107,7 +104,7 @@
       <img id="image-preview" src="" alt="image to text converter" />
     </div>
     <div id="premium_holder" class="three all-in">
-      <img id="premium_svg" src="premium.svg" alt="">
+      <img id="premium_svg" src="premium.svg" alt="premium">
     </div>
     <div class="four all-in" id="result_container">
       <div class="result" id="result">
@@ -147,21 +144,21 @@
         </p>
 
         <div class="para-img1">
-          <img src="ezgif-2-5887f82854-removebg-preview.png" alt="">
+          <img src="ezgif-2-5887f82854-removebg-preview.png" alt="Image-to-text-converter">
         </div>
     </div>
-    <hr>
+    <hr id="para_divider">
     <div class="para2">
       <p class="right-align">
       <p>
         Embrace the convenience and efficiency of our
-      <h5>Image to Text converter </h5> and bid farewell to the laborious manual typing. It's time to unlock the true
+      <h4>Image to Text converter </h4> and bid farewell to the laborious manual typing. It's time to unlock the true
       potential of your images with this user-friendly tool.
       </p>
       </p>
 
       <div class="para-img2">
-        <img src="https://www.nepalitrends.com/wp-content/uploads/2020/12/Image-to-text-converter-880x528.jpg" alt="">
+        <img src="https://www.nepalitrends.com/wp-content/uploads/2020/12/Image-to-text-converter-880x528.jpg" alt="imagetotextconvert">
       </div>
     </div>
   </section>
@@ -208,7 +205,7 @@
       About Us
     </div>
     <!-- heading -->
-    <div class="para1">
+    <div class="para1" id="para1">
       <p class="left-align">
         Say goodbye to the tedious manual typing and say hello to a smarter way of extracting text from images. In
         today's fast-paced technological world, wasting time converting jpg or png files to text is simply inefficient
@@ -217,11 +214,11 @@
         into text, saving you precious time and effort.
       </p>
 
-      <div class="para-img1">
-        <img src="ezgif-2-5887f82854-removebg-preview.png" alt="">
+      <div class="para-img1" id="para-img1">
+        <img src="ezgif-2-5887f82854-removebg-preview.png" alt="Image-to-text-converter">
       </div>
     </div>
-    <div class="para2">
+    <div class="para2" id="para2">
       <p class="right-align">
         Our free online OCR tool employs cutting-edge <a style="color: green;"
           href="https://www.explainthatstuff.com/how-ocr-works.html" target="_blank">optical character recognition (OCR)
@@ -230,19 +227,19 @@
         convenience of converting images to editable and searchable text with ease.
       </p>
 
-      <div class="para-img2">
-        <img src="https://www.nepalitrends.com/wp-content/uploads/2020/12/Image-to-text-converter-880x528.jpg" alt="">
+      <div class="para-img2" id="para-img2">
+        <img src="https://www.nepalitrends.com/wp-content/uploads/2020/12/Image-to-text-converter-880x528.jpg" alt="Image-to-text-convert">
       </div>
     </div>
-    <div class="para3">
+    <div class="para3" id="para3">
       <p class="left-align">Make text extraction a breeze for your business, academics, or personal needs. Our
         user-friendly interface and
         powerful OCR engine make it a top-notch choice for everyone. Enhance your productivity, save valuable time,
         and
         ensure accurate text conversion with our reliable and feature-packed image-to-text converter.</p>
 
-      <div class="para-img2">
-        <img src="https://www.nepalitrends.com/wp-content/uploads/2020/12/Image-to-text-converter-880x528.jpg" alt="">
+      <div class="para-img2" id="para-img3">
+        <img src="https://www.nepalitrends.com/wp-content/uploads/2020/12/Image-to-text-converter-880x528.jpg" alt="optical character recognition">
       </div>
     </div>
   </section>
@@ -514,7 +511,12 @@
   </footer>
 
   <!-- <script src="index.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </body>

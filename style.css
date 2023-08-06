@@ -79,6 +79,7 @@ body {
 .one {
   display: flex;
   /* flex-direction: column; */
+  height: 36vw;
   align-items: center;
   justify-content: center;
   grid-row: 1;
@@ -90,8 +91,9 @@ body {
   flex-direction: column;
   /* border: 2px solid green; */
   position: absolute;
-  bottom: 4rem;
-  height: 18rem;
+  bottom: 10%;
+  width: 70%;
+  height: 60%;
   justify-content: center;
   align-items: center;
   /* gap: 1rem; */
@@ -460,7 +462,7 @@ body {
   z-index: 9;
 }
 /* upload file button */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
 
   .one {
     grid-row: 1;
@@ -471,10 +473,10 @@ body {
     grid-column: 1 / span 3;
   }
   .three {
-    width: 80vw;
-    height: 90vw;
+    /* width: 80vw; */
+    height: 5vw;
     grid-row: 3;
-    grid-column: 1/ span 3;
+    grid-column: 1/span 2;
   }
   .four {
     grid-row: 4;
@@ -508,6 +510,7 @@ body {
 }
 .loader {
   position: absolute;
+  z-index: 100;
   left: 50%;
   top: 50%;
   display: block;
@@ -720,5 +723,54 @@ body {
 
   .faq {
     padding: 20px;
+  }
+  .one_content {
+    /* display: flex;
+    flex-direction: column;
+    border: 2px solid green; */
+    position: absolute;
+    bottom: 10%;
+    width: 50%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+  }
+}
+
+@media screen and (max-width:518px) {
+
+   .one_content {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* border: 2px solid green; */
+    position: absolute;
+    bottom: 5%;
+    width: 70%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+  }
+}
+@media screen and (max-width:394px) {
+
+   .one_content {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* border: 2px solid green; */
+    position: absolute;
+    bottom: 0%;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+  }
+  #animate_btn{
+    margin-top: 2rem;
+  }
+  #one_para{
+    margin-bottom: 2rem;
   }
 }
