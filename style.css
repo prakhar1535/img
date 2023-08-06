@@ -314,6 +314,8 @@ body {
 .how-it-works {
   margin: 0;
   background-color: #e6e7f0;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
 }
 
 .sticky {
